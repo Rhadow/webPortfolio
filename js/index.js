@@ -36,13 +36,29 @@ $(function() {
         }, animationTime);
     });
 
+    /* Check the timeline block elements and hide them if they are not in the viewport */
+    $(".timelineBlock").each(function() {
+        if ($(window).scrollTop() + $(window).height() * 0.75 < $(this).offset().top) {
+            $(this).find(".timelineContent, .timelineDate, .timelineImg").addClass("isHidden");
+        }
+    });
+
     /* Tracks the scroll position and create effects */
     $(window).on("scroll", function() {
         var curPos = $(window).scrollTop();
+        /* Show the nav bar when the scroll position scrolls over 2/3 of about section*/
         if (curPos > $("#about").outerHeight() / 1.5) {
             $("header").slideDown("1000");
         } else {
             $("header").slideUp("1000");
         }
+        /* When scroll to the timeline block, show the bounceIn animation */
+        $(".timelineBlock").each(function() {
+            if (curPos + $(window).height() * 0.75 >= $(this).offset().top && $(this).find(".timelineImg").hasClass("isHidden")) {
+                $(this).find(".timelineContent, .timelineImg").removeClass("isHidden").addClass("bounceIn");
+                $(this).find(".timelineDate").fadeIn(600);
+            }
+        });
+
     });
 });

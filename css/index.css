@@ -68,7 +68,7 @@ div.yellowTriangle {
     border-top: 25px solid #f2b636;
 }
 section, footer {
-    padding: 6%;
+    padding: 7%;
     max-width: 100%;
     color: white;
     box-shadow: inset 0 10px 15px -8px rgba(0, 0, 0, 0.6);
@@ -155,6 +155,7 @@ div#timelineWrapper {
 }
 div#timelineWrapper::before {
     /* This is the line of timeline */
+    
     height: 100%;
     position: absolute;
     content: "";
@@ -179,7 +180,7 @@ div.timelineBlock div.timelineImg {
     height: 60px;
     border-radius: 50%;
     border: 3px solid white;
-    margin-left: -30px;    
+    margin-left: -30px;
     background-color: #1f5251;
     box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2), 0 2px 0 2px rgba(0, 0, 0, 0.2);
 }
@@ -205,6 +206,108 @@ div.timelineContent h1 {
 }
 div.timelineContent p {
     text-shadow: none;
+}
+@-webkit-keyframes iconBounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.6);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+    }
+}
+@-moz-keyframes iconBounceIn {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0.6);
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: scale(1.2);
+    }
+    100% {
+        -moz-transform: scale(1.0);
+    }
+}
+@keyframes iconBounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.6);
+        -mos-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+        -o-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+        -mos-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        -mos-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        -o-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+@-webkit-keyframes contentBounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(150px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(-20px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+    }
+}
+@-mos-keyframes contentBounceIn {
+    0% {
+        opacity: 0;
+        -mos-transform: translateX(150px);
+    }
+    60% {
+        opacity: 1;
+        -mos-transform: translateX(-20px);
+    }
+    100% {
+        -mos-transform: translateX(0px);
+    }
+}
+@keyframes contentBounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(150px);
+        -mos-transform: translateX(150px);
+        -ms-transform: translateX(150px);
+        -o-transform: translateX(150px);
+        transform: translateX(150px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translateX(-20px);
+        -mos-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+        -o-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        -mos-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        transform: translateX(0px);
+    }
 }
 @media screen and (max-width: 767px) {
     header {
@@ -236,7 +339,7 @@ div.timelineContent p {
     }
     div.timelineDate {
         position: relative;
-        left: 0;
+        left: 30%;
         margin-bottom: 2%;
     }
     div.timelineBlock div.timelineImg {
@@ -244,5 +347,28 @@ div.timelineContent p {
     }
     div#timelineWrapper::before {
         left: 10%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .timelineContent.isHidden {
+        visibility: hidden;
+    }
+    .timelineContent.bounceIn {
+        visibility: visible;
+        -webkit-animation: contentBounceIn 0.6s;
+        -moz-animation: contentBounceIn 0.6s;
+        animation: contentBounceIn 0.6s;
+    }
+    .timelineImg.isHidden {
+        visibility: hidden;
+    }
+    .timelineImg.bounceIn {
+        visibility: visible;
+        -webkit-animation: iconBounceIn 0.6s;
+        -moz-animation: iconBounceIn 0.6s;
+        animation: iconBounceIn 0.6s;
+    }
+    .timelineDate.isHidden{
+        display: none;
     }
 }
