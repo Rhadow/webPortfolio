@@ -1,3 +1,6 @@
+body strong {
+    font-weight: bold;
+}
 header {
     position: fixed;
     top: 0px;
@@ -65,17 +68,18 @@ div.yellowTriangle {
     border-top: 25px solid #f2b636;
 }
 section, footer {
-    padding: 7%;
+    padding: 6%;
     max-width: 100%;
     color: white;
     box-shadow: inset 0 10px 15px -8px rgba(0, 0, 0, 0.6);
+    font-family: sans-serif;
 }
-section h1{
-	font-size: 2.5em;
+section h1 {
+    font-size: 2.5em;
 }
-section p{
-	font-size: 1em;
-	line-height: 1.4em;
+section p {
+    font-size: 1em;
+    line-height: 1.4em;
 }
 #about {
     color: #8a8a8a;
@@ -125,12 +129,6 @@ div.moreLinks .moreLink3 {
 div.moreLinks .moreLink4 {
     background-color: rgba(62, 62, 62, 0.7);
 }
-#timeline {
-    background-color: #3da3a2;
-}
-#timeline h1{
-	margin-bottom: 1%;
-}
 #skill {
     background-color: #eb713b;
 }
@@ -139,6 +137,74 @@ div.moreLinks .moreLink4 {
 }
 #contact {
     background-color: #3e3e3e;
+}
+#timeline {
+    background-color: #3da3a2;
+    font-size: 1.1em;
+    text-shadow: 0.07em 0.07em rgba(0, 0, 0, 0.4);
+}
+#timeline h1 {
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+div#timelineWrapper {
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em 0;
+}
+div#timelineWrapper::before {
+    /* This is the line of timeline */
+    height: 100%;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 17%;
+    width: 5px;
+    background-color: #1f5251; //#2e7a7a
+}
+div.timelineBlock {
+    position: relative;
+    color: #1f5251;
+    min-height: 150px;
+    margin-bottom: 15px;
+}
+div.timelineBlock.born {
+    min-height: 0px;
+}
+div.timelineBlock div.timelineImg {
+    position: absolute;
+    left: 17%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: -30px;    
+    background-color: #1f5251;
+    box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2), 0 2px 0 2px rgba(0, 0, 0, 0.2);
+}
+div.timelineBlock div.timelineImg img {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    top: 28.3333333%;
+    left: 28.3333333%;
+}
+div.timelineDate {
+    position: absolute;
+    left: 2%;
+    font-size: 1.5em;
+    text-shadow: none;
+}
+div.timelineContent {
+    margin-left: 30%;
+}
+div.timelineContent h1 {
+    color: white;
+    font-size: 1.5em;
+}
+div.timelineContent p {
+    text-shadow: none;
 }
 @media screen and (max-width: 767px) {
     header {
@@ -164,5 +230,19 @@ div.moreLinks .moreLink4 {
     }
     div.moreLinks a {
         display: none;
+    }
+    div.timelineContent {
+        margin-left: 30%;
+    }
+    div.timelineDate {
+        position: relative;
+        left: 0;
+        margin-bottom: 2%;
+    }
+    div.timelineBlock div.timelineImg {
+        left: 10%;
+    }
+    div#timelineWrapper::before {
+        left: 10%;
     }
 }
