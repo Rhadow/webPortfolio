@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"min",
+				"min-width"
+			],
+			[
+				"time",
+				"timelineImg"
+			],
+			[
+				"timelin",
+				"timelineBlock"
+			],
+			[
+				"sc",
+				"scrollTop"
+			],
+			[
+				"trans",
+				"translateX"
+			],
+			[
+				"conte",
+				"contentBounceIn"
+			],
+			[
+				"con",
+				"contentBounceIn"
+			],
+			[
 				"margin",
 				"margin-bottom"
 			],
@@ -104,10 +132,6 @@
 				"$scope	AngularJS"
 			],
 			[
-				"con",
-				"controller	AngularJS"
-			],
-			[
 				"fade",
 				"fadeOut"
 			],
@@ -147,7 +171,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 9574,
+				"buffer_size": 10561,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,7 +179,7 @@
 			"file": "css/index.css",
 			"settings":
 			{
-				"buffer_size": 4657,
+				"buffer_size": 8728,
 				"line_ending": "Unix"
 			}
 		},
@@ -163,7 +187,7 @@
 			"file": "js/index.js",
 			"settings":
 			{
-				"buffer_size": 1607,
+				"buffer_size": 2479,
 				"line_ending": "Unix"
 			}
 		}
@@ -321,6 +345,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"iconBounceIn",
+			"contentBounceIn",
+			"timelineDate",
+			"100",
+			"webkit",
+			"1.2",
+			"0.6",
 			"img",
 			"social",
 			"class=\"social\"",
@@ -351,7 +382,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -360,21 +391,54 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9574,
+						"buffer_size": 10561,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9574,
-								9574
+								2641,
+								2641
 							]
 						],
 						"settings":
 						{
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 297.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/index.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8728,
+								8728
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -384,49 +448,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "css/index.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4657,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1509,
-								1509
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 870.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
 					"buffer": 2,
 					"file": "js/index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1607,
+						"buffer_size": 2479,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								732,
-								732
+								2466,
+								2466
 							]
 						],
 						"settings":
@@ -436,8 +471,8 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 2.0,
+						"translation.y": 239.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
