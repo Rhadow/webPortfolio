@@ -59,6 +59,5 @@ $(function() {
                 $(this).find(".timelineDate").fadeIn(600);
             }
         });
-
     });
 });
