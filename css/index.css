@@ -469,7 +469,7 @@ li.moreItem {
 }
 @media screen and (max-width: 479px){
     div.barImg{
-        width: 25px;
-        top: 5%;
+        width: 22px;
+        top: 10%;
     }
 }
