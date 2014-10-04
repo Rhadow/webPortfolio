@@ -318,24 +318,51 @@ div.chart {
     width: 80%;
 }
 div.chart h1 {
-    margin-left: 7%;
+    margin-left: 10%;
     margin-bottom: 2%;
 }
-li.item {
+li.item{
     position: relative;
-    margin-bottom: 4%;
+    margin-top: 4%;
 }
-li.item img {
-    max-width: 5.5%;
+li.item progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    margin-left: 10%;
+    width: 90%;
+    height: 30px;
+    background: #eb713b;
 }
-li.item div.bar {
-    background-color: #4b1c0f;
-    font-size: 1.1em;
-    padding: 0.7%;
+li.item progress::-webkit-progress-value{
+    background: #4b1c0f;
+}
+li.item progress::-webkit-progress-bar{
+    background: #eb713b;
+}
+li.item progress::-mos-progress-bar{
+    background: #4b1c0f;
+}
+div.bar {
+    position: relative;
+}
+div.bar h3{
     position: absolute;
-    top: 14%;
-    left: 9%;
     color: #eb713b;
+    top: 20%;
+    left: 11%;
+}
+div.barImg{
+    display: inline-block;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: -8.571428%;
+}
+div.barImg img{
+    display: block;
+    max-width: 100%;
 }
 div.more {
     text-align: right;
@@ -345,8 +372,7 @@ div.more {
 li.moreItem {
     color: #4b1c0f;
     text-shadow: none;
-    font-size: 1.1em;
-    margin: 10% 0;
+    margin: 15% 0;
 }
 #work {
     background-color: #f2b636;
@@ -398,14 +424,24 @@ li.moreItem {
     div#timelineWrapper::before {
         left: 10%;
     }
+    div.chart {
+        width: 100%;
+        float: none;
+        clear: both;
+    }
     div.more {
         text-align: left;
         float: none;
         clear: both;
+        margin-top: 5%;
         max-width: 100%;
     }
     li.moreItem {
         margin: 1% 0;
+    }
+    div.barImg{
+        width: 30px;
+        top: 5%;
     }
 }
 @media screen and (min-width: 768px) {
@@ -429,5 +465,11 @@ li.moreItem {
     }
     .timelineDate.isHidden {
         display: none;
+    }
+}
+@media screen and (max-width: 479px){
+    div.barImg{
+        width: 25px;
+        top: 5%;
     }
 }
