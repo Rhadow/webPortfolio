@@ -335,6 +335,10 @@ li.item progress {
     width: 90%;
     height: 30px;
     background: #eb713b;
+    /* Firefox */
+    
+    color: #eb713b;
+    /* IE */
 }
 li.item progress::-webkit-progress-value {
     background: #4b1c0f;
