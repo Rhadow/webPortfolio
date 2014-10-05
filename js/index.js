@@ -43,6 +43,13 @@ $(function() {
         }
     });
 
+    /* Check the skill progess elements and hide them if they are not in the viewport */
+    $(".items .item").each(function() {
+        if ($(window).scrollTop() + $(window).height() * 0.75 < $(this).offset().top) {
+            $(this).find("progress, h3").addClass("isHidden");
+        }
+    });
+
     /* Tracks the scroll position and create effects */
     $(window).on("scroll", function() {
         var curPos = $(window).scrollTop();
@@ -57,6 +64,13 @@ $(function() {
             if (curPos + $(window).height() * 0.75 >= $(this).offset().top && $(this).find(".timelineImg").hasClass("isHidden")) {
                 $(this).find(".timelineContent, .timelineImg").removeClass("isHidden").addClass("bounceIn");
                 $(this).find(".timelineDate").fadeIn(600);
+            }
+        });
+        /* When scroll to the skill block, show the barFill animation */
+        $(".items .item").each(function() {
+            if (curPos + $(window).height() * 0.85 >= $(this).offset().top && $(this).find("h3").hasClass("isHidden")) {
+                $(this).find("progress, h3").removeClass("isHidden");
+                $(this).find("progress").addClass("barFill");
             }
         });
     });

@@ -143,8 +143,6 @@ div#timelineWrapper {
     padding: 2em 0;
 }
 div#timelineWrapper::before {
-    /* This is the line of timeline */
-    
     height: 100%;
     position: absolute;
     content: "";
@@ -153,6 +151,8 @@ div#timelineWrapper::before {
     width: 5px;
     background-color: #1f5251; //#2e7a7a
 }
+/* This is the line of timeline */
+
 div.timelineBlock {
     position: relative;
     color: #1f5251;
@@ -225,7 +225,7 @@ div.timelineContent p {
     0% {
         opacity: 0;
         -webkit-transform: scale(0.6);
-        -mos-transform: scale(0.6);
+        -moz-transform: scale(0.6);
         -ms-transform: scale(0.6);
         -o-transform: scale(0.6);
         transform: scale(0.6);
@@ -233,14 +233,14 @@ div.timelineContent p {
     60% {
         opacity: 1;
         -webkit-transform: scale(1.2);
-        -mos-transform: scale(1.2);
+        -moz-transform: scale(1.2);
         -ms-transform: scale(1.2);
         -o-transform: scale(1.2);
         transform: scale(1.2);
     }
     100% {
         -webkit-transform: scale(1.0);
-        -mos-transform: scale(1.0);
+        -moz-transform: scale(1.0);
         -ms-transform: scale(1.0);
         -o-transform: scale(1.0);
         transform: scale(1.0);
@@ -259,24 +259,24 @@ div.timelineContent p {
         -webkit-transform: translateX(0px);
     }
 }
-@-mos-keyframes contentBounceIn {
+@-moz-keyframes contentBounceIn {
     0% {
         opacity: 0;
-        -mos-transform: translateX(150px);
+        -moz-transform: translateX(150px);
     }
     60% {
         opacity: 1;
-        -mos-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
     }
     100% {
-        -mos-transform: translateX(0px);
+        -moz-transform: translateX(0px);
     }
 }
 @keyframes contentBounceIn {
     0% {
         opacity: 0;
         -webkit-transform: translateX(150px);
-        -mos-transform: translateX(150px);
+        -moz-transform: translateX(150px);
         -ms-transform: translateX(150px);
         -o-transform: translateX(150px);
         transform: translateX(150px);
@@ -284,14 +284,14 @@ div.timelineContent p {
     60% {
         opacity: 1;
         -webkit-transform: translateX(-20px);
-        -mos-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
         -ms-transform: translateX(-20px);
         -o-transform: translateX(-20px);
         transform: translateX(-20px);
     }
     100% {
         -webkit-transform: translateX(0px);
-        -mos-transform: translateX(0px);
+        -moz-transform: translateX(0px);
         -ms-transform: translateX(0px);
         -o-transform: translateX(0px);
         transform: translateX(0px);
@@ -301,9 +301,10 @@ div.timelineContent p {
     background-color: #eb713b;
     font-size: 1.1em;
     text-shadow: 0.07em 0.07em rgba(0, 0, 0, 0.4);
+    padding-bottom: 4%;
 }
 div.skillBlock {
-    margin: 4% auto;
+    margin: 6% auto;
 }
 div.skillBlock:after {
     display: block;
@@ -321,7 +322,7 @@ div.chart h1 {
     margin-left: 10%;
     margin-bottom: 2%;
 }
-li.item{
+li.item {
     position: relative;
     margin-top: 4%;
 }
@@ -335,32 +336,32 @@ li.item progress {
     height: 30px;
     background: #eb713b;
 }
-li.item progress::-webkit-progress-value{
+li.item progress::-webkit-progress-value {
     background: #4b1c0f;
 }
-li.item progress::-webkit-progress-bar{
+li.item progress::-webkit-progress-bar {
     background: #eb713b;
 }
-li.item progress::-mos-progress-bar{
+li.item progress::-moz-progress-bar {
     background: #4b1c0f;
 }
 div.bar {
     position: relative;
 }
-div.bar h3{
+div.bar h3 {
     position: absolute;
     color: #eb713b;
     top: 20%;
     left: 11%;
 }
-div.barImg{
+div.barImg {
     display: inline-block;
     position: absolute;
     width: 35px;
     height: 35px;
     top: -8.571428%;
 }
-div.barImg img{
+div.barImg img {
     display: block;
     max-width: 100%;
 }
@@ -373,6 +374,30 @@ li.moreItem {
     color: #4b1c0f;
     text-shadow: none;
     margin: 15% 0;
+}
+@-moz-keyframes barFill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+@-webkit-keyframes barFill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+@keyframes barFill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
 }
 #work {
     background-color: #f2b636;
@@ -396,6 +421,12 @@ li.moreItem {
     }
     nav ul li {
         margin: 0 1em 0 0;
+    }
+    section {
+        padding-top: 11%;
+    }
+    footer {
+        padding-top: 11%;
     }
     #about {
         padding: 5%;
@@ -439,12 +470,24 @@ li.moreItem {
     li.moreItem {
         margin: 1% 0;
     }
-    div.barImg{
+    div.barImg {
         width: 30px;
         top: 5%;
     }
+    div.chart h1 {
+        margin-left: 0%;
+    }
 }
 @media screen and (min-width: 768px) {
+    .item .isHidden {
+        visibility: hidden;
+    }
+    .item .barFill {
+        visibility: visible;
+        -webkit-animation: barFill 1.5s;
+        -moz-animation: barFill 1.5s;
+        animation: barFill 1.5s;
+    }
     .timelineContent.isHidden {
         visibility: hidden;
     }
@@ -467,8 +510,14 @@ li.moreItem {
         display: none;
     }
 }
-@media screen and (max-width: 479px){
-    div.barImg{
+@media screen and (max-width: 479px) {
+    section {
+        padding-top: 15%;
+    }
+    footer {
+        padding-top: 15%;
+    }
+    div.barImg {
         width: 22px;
         top: 10%;
     }
