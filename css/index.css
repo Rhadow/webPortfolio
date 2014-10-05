@@ -337,7 +337,7 @@ li.item progress {
     background: #eb713b;
     /* Firefox */
     
-    color: #eb713b;
+    color: #4b1c0f;
     /* IE */
 }
 li.item progress::-webkit-progress-value {
