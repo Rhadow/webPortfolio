@@ -72,7 +72,7 @@ section, footer {
     padding: 7%;
     max-width: 100%;
     color: white;
-    box-shadow: inset 0 17px 0px -8px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 18px 0px -8px rgba(10, 10, 10, 0.1);
     font-family: sans-serif;
 }
 section h1 {
@@ -450,6 +450,14 @@ div.hobbyContent{
     background-color: #3e3e3e;
     font-size: 1.1em;
     text-shadow: 0.07em 0.07em rgba(0, 0, 0, 0.4);
+}
+.linkBlock{
+    display: inline-block;
+    max-width: 32.8%;
+}
+.linkBlock a{
+    color: white;
+    text-decoration: none;
 }
 @media screen and (max-width: 767px) {
     header {
