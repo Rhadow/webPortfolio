@@ -1,5 +1,6 @@
 body strong {
     font-weight: bold;
+    font-size: 1.1em;
 }
 header {
     position: fixed;
@@ -41,7 +42,7 @@ nav .navLink3 a {
     background-color: #eb713b;
 }
 nav .navLink4 a {
-    background-color: #f2b636;
+    background-color: #a4bf7f;
 }
 nav .navLink5 a {
     background-color: #3e3e3e;
@@ -65,13 +66,13 @@ div.orangeTriangle {
     border-top: 25px solid #eb713b;
 }
 div.yellowTriangle {
-    border-top: 25px solid #f2b636;
+    border-top: 25px solid #a4bf7f;
 }
 section, footer {
     padding: 7%;
     max-width: 100%;
     color: white;
-    box-shadow: inset 0 10px 15px -8px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 17px 0px -8px rgba(0, 0, 0, 0.1);
     font-family: sans-serif;
 }
 section h1 {
@@ -126,7 +127,7 @@ div.moreLinks .moreLink2 {
     background-color: rgba(235, 113, 59, 0.7);
 }
 div.moreLinks .moreLink3 {
-    background-color: rgba(242, 182, 54, 0.7);
+    background-color: rgba(164, 191, 127, 0.7);
 }
 div.moreLinks .moreLink4 {
     background-color: rgba(62, 62, 62, 0.7);
@@ -149,7 +150,7 @@ div#timelineWrapper::before {
     top: 0;
     left: 17%;
     width: 5px;
-    background-color: #1f5251; //#2e7a7a
+    background-color: #1f5251;
 }
 /* This is the line of timeline */
 
@@ -403,10 +404,36 @@ li.moreItem {
         width: 90%;
     }
 }
-#work {
-    background-color: #f2b636;
+#hobby {
+    background-color: #a4bf7f;
+    color: #303825;
     font-size: 1.1em;
-    text-shadow: 0.07em 0.07em rgba(0, 0, 0, 0.4);
+}
+div.hobbyBlock {
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 32.8%;
+    padding: 2%;
+    text-align: center;
+    margin-top: 5%;
+}
+.hobbyImg {
+    margin-bottom: 8%;
+}
+.hobbyImg img {
+    width: 33.333333333%;
+}
+div.hobbyContent{
+    vertical-align: middle;
+}
+.hobbyBlock h3 {
+    font-size: 1.45em;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+.hobbyBlock p {
+    font-size: 0.9em;
+    text-align: left;
 }
 #contact {
     background-color: #3e3e3e;
@@ -480,6 +507,13 @@ li.moreItem {
     }
     div.chart h1 {
         margin-left: 0%;
+    }
+    div.hobbyBlock {
+        display: block;
+        max-width: 100%;
+    }
+    .hobbyImg img {
+        width: 20%;
     }
 }
 @media screen and (min-width: 768px) {
