@@ -430,7 +430,7 @@ div.hobbyBlock {
 .hobbyImg img {
     width: 33.333333333%;
 }
-div.hobbyContent{
+div.hobbyContent {
     vertical-align: middle;
 }
 .hobbyBlock h3 {
@@ -442,7 +442,7 @@ div.hobbyContent{
     font-size: 0.9em;
     text-align: left;
 }
-.hobbyBlock a{
+.hobbyBlock a {
     color: #303825;
     font-weight: bold;
 }
@@ -451,13 +451,28 @@ div.hobbyContent{
     font-size: 1.1em;
     text-shadow: 0.07em 0.07em rgba(0, 0, 0, 0.4);
 }
-.linkBlock{
+.linkBlock {
     display: inline-block;
     max-width: 32.8%;
 }
-.linkBlock a{
+.linkBlock a {
     color: white;
     text-decoration: none;
+}
+a.mail:hover {
+    color: orange;
+}
+a.linkedIn:hover {
+    color: green;
+}
+a.google:hover {
+    color: red;
+}
+a.twitter:hover {
+    color: teal;
+}
+a.fb:hover {
+    color: blue;
 }
 @media screen and (max-width: 767px) {
     header {
