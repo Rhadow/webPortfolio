@@ -81,7 +81,14 @@ section h1 {
     font-weight: bold;
 }
 section p {
-    font-size: 1em;
+    line-height: 1.5em;
+}
+footer h1 {
+    font-size: 2.5em;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+footer p {
     line-height: 1.5em;
 }
 #about {
@@ -434,6 +441,10 @@ div.hobbyContent{
 .hobbyBlock p {
     font-size: 0.9em;
     text-align: left;
+}
+.hobbyBlock a{
+    color: #303825;
+    font-weight: bold;
 }
 #contact {
     background-color: #3e3e3e;
