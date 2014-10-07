@@ -9,6 +9,8 @@ header {
     width: 100%;
     height: 20px;
     padding: 10px;
+    font-family: "century gothic", sans-serif;
+    color: #333333;
     background-color: white;
     z-index: 100;
     display: none;
@@ -69,7 +71,7 @@ div.yellowTriangle {
     border-top: 25px solid #a4bf7f;
 }
 section, footer {
-    padding: 7%;
+    padding: 5% 7%;
     max-width: 100%;
     color: white;
     box-shadow: inset 0 18px 0px -8px rgba(10, 10, 10, 0.1);
@@ -192,6 +194,9 @@ div.timelineDate {
     left: 2%;
     font-size: 1.5em;
     text-shadow: none;
+}
+div.timelineDate strong {
+    font-size: 1em;
 }
 div.timelineContent {
     margin-left: 30%;
@@ -451,11 +456,21 @@ div.hobbyContent {
     font-size: 1.1em;
     text-shadow: 0.07em 0.07em rgba(0, 0, 0, 0.4);
 }
-.linkBlock {
-    display: inline-block;
-    max-width: 32.8%;
+div.linkBlock {
+    margin-top: 5%;
+    padding-left: 5%;
 }
-.linkBlock a {
+.linkBlock li {
+    float: left;
+    width: 33.3333333%;
+    margin-bottom: 4%;
+}
+.linkBlock::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.linkBlock li a {
     color: white;
     text-decoration: none;
 }
@@ -463,16 +478,43 @@ a.mail:hover {
     color: orange;
 }
 a.linkedIn:hover {
-    color: green;
+    color: #007bb6;
 }
 a.google:hover {
-    color: red;
+    color: #c63d2d;
 }
 a.twitter:hover {
-    color: teal;
+    color: #4099ff;
 }
 a.fb:hover {
-    color: blue;
+    color: #3b5998;
+}
+@media screen and (max-width: 479px) {
+    section {
+        padding-top: 15%;
+    }
+    footer {
+        padding-top: 15%;
+    }
+    div.barImg {
+        width: 22px;
+        top: 10%;
+    }
+    .linkBlock li {
+        float: none;
+        width: 100%;
+        font-size: 0.9em;
+    }
+    [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+        font-size: 30px;
+        margin-right: 4%;
+    }
+}
+@media screen and (max-width: 720px) {
+    .linkBlock li {
+        float: none;
+        width: 100%;
+    }
 }
 @media screen and (max-width: 767px) {
     header {
@@ -581,16 +623,12 @@ a.fb:hover {
     .timelineDate.isHidden {
         display: none;
     }
-}
-@media screen and (max-width: 479px) {
-    section {
-        padding-top: 15%;
-    }
     footer {
-        padding-top: 15%;
+        padding-bottom: 2%;
     }
-    div.barImg {
-        width: 22px;
-        top: 10%;
+}
+@media screen and (max-width: 1100px) {
+    .linkBlock li {
+        width: 50%;
     }
 }
